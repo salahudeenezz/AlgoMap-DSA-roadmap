@@ -1,0 +1,41 @@
+class Solution:
+    def findClosestNumber(self, nums: List[int]) -> int:
+        g = []
+        h = []
+
+        for i in nums:
+            if i < 0:
+                g.append(i)
+            elif i > 0:
+                h.append(i)
+            elif i == 0:
+                return 0
+        
+
+        g.sort()
+        h.sort()
+
+        if g == []:
+            return min(h)
+        elif h == []:
+            return max(g)
+        else:
+                t = g[-1]
+                o = h[0]
+
+        e = [abs(t), abs(o)]
+
+        e.sort()
+
+        if -e[0] in g:
+            if -e[0] == -1 and h[0] == 1:
+                return 1
+            else:
+                if e[0] in h:
+                    return e[0]
+                else:
+                    return -e[0]
+        else:
+                return e[0]
+            
+        
