@@ -9,8 +9,7 @@ class Solution:
             elif i > 0:
                 h.append(i)
             elif i == 0:
-                return 0
-        
+                return 0  
 
         g.sort()
         h.sort()
