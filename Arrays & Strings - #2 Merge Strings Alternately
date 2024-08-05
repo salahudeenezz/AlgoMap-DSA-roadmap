@@ -2,7 +2,7 @@ class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
         x = " ".join(word1)
         y = " ".join(word2)
-        
+
         list_one = x.split(" ")
         list_two = y.split(" ")
 
