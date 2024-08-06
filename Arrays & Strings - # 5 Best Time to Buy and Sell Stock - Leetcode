@@ -1,0 +1,15 @@
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        if prices is None:
+            return 0
+        min_profit = float('inf')
+        max_profit = 0
+
+        for price in prices:
+            if price < min_profit:
+                min_profit = price
+            else:
+                x = price - min_profit
+                if x > max_profit:
+                    max_profit = x
+        return max_profit
